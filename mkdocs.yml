@@ -1,1 +1,23 @@
-site_name: My Docs
+site_name: Curso HVAC Hospitalar
+site_description: Curso de aperfeiçoamento em projetos HVAC para Estabelecimentos Assistenciais de Saúde
+
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: light
+      primary: blue
+      accent: orange
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: pt
+
+nav:
+  - Início: index.md
+  - Módulo 0 - Fundamentos Regulatórios: modulo_00.md
