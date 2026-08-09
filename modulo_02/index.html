@@ -1,0 +1,1183 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de aperfeiçoamento em projetos HVAC para Estabelecimentos Assistenciais de Saúde">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Módulo 2: Renovação, Recirculação e Exaustão — Balanço de Vazões - Curso HVAC Hospitalar</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modulo-2-renovacao-recirculacao-e-exaustao-balanco-de-vazoes" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Curso HVAC Hospitalar" class="md-header__button md-logo" aria-label="Curso HVAC Hospitalar" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curso HVAC Hospitalar
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Módulo 2: Renovação, Recirculação e Exaustão — Balanço de Vazões
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="blue" data-md-color-accent="orange"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Curso HVAC Hospitalar" class="md-nav__button md-logo" aria-label="Curso HVAC Hospitalar" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Curso HVAC Hospitalar
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo_00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 0 - Fundamentos Regulatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo 1 - Levantamento de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versao-verificada-com-texto-integral-de-nbr-72562021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Versão Verificada com texto integral de NBR 7256:2021
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-de-aprendizagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos de Aprendizagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pré-requisitos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-1-as-definicoes-exatas-da-norma-item-320-e-321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 1: As Definições Exatas da Norma (Item 3.20 e 3.21)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-2-a-formula-de-conversao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 2: A Fórmula de Conversão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-3-caso-real-1-sala-de-cirurgia-tabela-a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 3: Caso Real 1 — Sala de Cirurgia (Tabela A.3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seção 3: Caso Real 1 — Sala de Cirurgia (Tabela A.3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dados-da-norma-ja-levantados-no-modulo-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados da Norma (já levantados no Módulo 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dados-do-seu-projeto-exemplo-hipotetico-sala-real-de-40-m2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados do Seu Projeto (exemplo hipotético — sala real de 40 m²)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculo Passo a Passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado Final
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-4-caso-real-2-uti-padrao-tabela-a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 4: Caso Real 2 — UTI Padrão (Tabela A.2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seção 4: Caso Real 2 — UTI Padrão (Tabela A.2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dados-da-norma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados da Norma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dados-do-projeto-uti-de-5-leitos-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados do Projeto (UTI de 5 leitos, exemplo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-final_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado Final
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-5-caso-real-3-isolamento-aii-comparando-com-e-sem-recirculacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 5: Caso Real 3 — Isolamento AII, Comparando Com e Sem Recirculação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seção 5: Caso Real 3 — Isolamento AII, Comparando Com e Sem Recirculação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcao-a-quarto-aii-sem-recirculacao-tabela-a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção A: Quarto AII SEM recirculação (Tabela A.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcao-b-quarto-aii-com-recirculacao-tabela-a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção B: Quarto AII COM recirculação (Tabela A.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-comparativo-quarto-de-isolamento-30-m3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculo Comparativo (quarto de isolamento, 30 m³)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacao-lado-a-lado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparação Lado a Lado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-6-balanco-de-exaustao-regra-de-massa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 6: Balanço de Exaustão — Regra de Massa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-7-ferramenta-pratica-planilha-de-conversao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 7: Ferramenta Prática — Planilha de Conversão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-8-checkpoint-valide-seu-aprendizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção 8: Checkpoint — Valide Seu Aprendizado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seção 8: Checkpoint — Valide Seu Aprendizado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pergunta-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pergunta 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pergunta-2-calculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pergunta 2 — Cálculo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desafio-pratico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desafio Prático
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossario-do-modulo-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossário do Módulo 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-normativas-do-modulo-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Normativas do Módulo 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximo-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Próximo Módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modulo-2-renovacao-recirculacao-e-exaustao-balanco-de-vazoes">Módulo 2: Renovação, Recirculação e Exaustão — Balanço de Vazões<a class="headerlink" href="#modulo-2-renovacao-recirculacao-e-exaustao-balanco-de-vazoes" title="Permanent link">&para;</a></h1>
+<h3 id="versao-verificada-com-texto-integral-de-nbr-72562021">✅ Versão Verificada com texto integral de NBR 7256:2021<a class="headerlink" href="#versao-verificada-com-texto-integral-de-nbr-72562021" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="resumo-executivo">Resumo Executivo<a class="headerlink" href="#resumo-executivo" title="Permanent link">&para;</a></h2>
+<p>A norma fala em <strong>renovações por hora</strong> e <strong>movimentações por hora</strong> — números adimensionais que não dizem nada até você convertê-los em <strong>vazão real (L/s ou m³/h)</strong> para o volume específico da sua sala. Este módulo ensina exatamente essa conversão, usando as definições oficiais da norma (item 3.20 e 3.21) e dados reais das Tabelas A.1 a A.7.</p>
+<hr />
+<h2 id="objetivos-de-aprendizagem">Objetivos de Aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Permanent link">&para;</a></h2>
+<p>Ao final deste módulo, você será capaz de:</p>
+<ul>
+<li><strong>Diferenciar</strong>, com base na definição normativa, "renovação" de "movimentação" de ar</li>
+<li><strong>Converter</strong> trocas/hora (dado da norma) em vazão L/s (dado de projeto/equipamento)</li>
+<li><strong>Calcular</strong> a parcela de ar recirculado quando movimentação &gt; renovação</li>
+<li><strong>Aplicar</strong> a regra de balanço de massa para dimensionar exaustão</li>
+<li><strong>Resolver</strong> três casos reais extraídos diretamente das tabelas da norma</li>
+</ul>
+<hr />
+<h2 id="pre-requisitos">Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Módulo 0 (classificação PE/AII/AO/AA, filtragem)</li>
+<li>Módulo 1 (ficha de levantamento de ambiente, com dados de renovação/movimentação já preenchidos)</li>
+</ul>
+<hr />
+<h2 id="secao-1-as-definicoes-exatas-da-norma-item-320-e-321">Seção 1: As Definições Exatas da Norma (Item 3.20 e 3.21)<a class="headerlink" href="#secao-1-as-definicoes-exatas-da-norma-item-320-e-321" title="Permanent link">&para;</a></h2>
+<p>Antes de calcular qualquer coisa, fixe as duas definições oficiais — elas são frequentemente confundidas:</p>
+<blockquote>
+<p><cite>"3.20 número de movimentações de ar por hora (air changes per hour): quociente da vazão em metro cúbico por hora (m³/h) e o volume da sala em metro cúbico (m³)"</cite></p>
+<p><cite>"3.21 número de renovações de ar por hora (outside air changes per hour): quociente da vazão de ar insuflado no ambiente em metro cúbico por hora (m³/h) de ar exterior introduzido no ambiente e o volume da sala em metros cúbicos (m³)"</cite></p>
+</blockquote>
+<p><strong>Tradução prática</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>O que conta</th>
+<th>Inclui recirculação?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Renovação</strong> (outside air changes)</td>
+<td>Só ar <strong>vindo de fora</strong> do prédio</td>
+<td>❌ Não</td>
+</tr>
+<tr>
+<td><strong>Movimentação</strong> (air changes)</td>
+<td><strong>Todo</strong> ar insuflado (novo + recirculado)</td>
+<td>✅ Sim</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consequência matemática direta</strong>: movimentação ≥ renovação, sempre. Se os dois números forem iguais na tabela, significa <strong>0% de recirculação</strong> (100% ar exterior).</p>
+<hr />
+<h2 id="secao-2-a-formula-de-conversao">Seção 2: A Fórmula de Conversão<a class="headerlink" href="#secao-2-a-formula-de-conversao" title="Permanent link">&para;</a></h2>
+<p>A norma define os dois números como razão entre vazão e volume. Isso significa que, para ir de "trocas por hora" (dado da norma) para "vazão real" (dado que você precisa para especificar equipamento), a fórmula é a definição invertida:</p>
+<pre><code>Vazão (m³/h) = Nº de trocas por hora × Volume da sala (m³)
+</code></pre>
+<p>Para converter de m³/h para <strong>L/s</strong> (unidade mais usada em especificação de equipamento HVAC):</p>
+<pre><code>Vazão (L/s) = Vazão (m³/h) × 1000 ÷ 3600
+            = Vazão (m³/h) ÷ 3,6
+</code></pre>
+<p><strong>Fórmula combinada (a que você vai usar o tempo todo)</strong>:</p>
+<pre><code>Vazão (L/s) = (Volume da sala em m³ × Trocas por hora) ÷ 3,6
+</code></pre>
+<hr />
+<h2 id="secao-3-caso-real-1-sala-de-cirurgia-tabela-a3">Seção 3: Caso Real 1 — Sala de Cirurgia (Tabela A.3)<a class="headerlink" href="#secao-3-caso-real-1-sala-de-cirurgia-tabela-a3" title="Permanent link">&para;</a></h2>
+<h3 id="dados-da-norma-ja-levantados-no-modulo-1">Dados da Norma (já levantados no Módulo 1)<a class="headerlink" href="#dados-da-norma-ja-levantados-no-modulo-1" title="Permanent link">&para;</a></h3>
+<p>Da <strong>Tabela A.3 — Centro cirúrgico (CC)</strong>, linha "Sala de cirurgia":</p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Valor Normativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tipo</td>
+<td>PE</td>
+</tr>
+<tr>
+<td>Nível de risco</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Pressão</td>
+<td>Positiva</td>
+</tr>
+<tr>
+<td><strong>Vazão mínima de ar exterior</strong></td>
+<td><strong>5 renovações/hora</strong></td>
+</tr>
+<tr>
+<td><strong>Vazão mínima de ar insuflado</strong></td>
+<td><strong>25 movimentações/hora</strong></td>
+</tr>
+<tr>
+<td>Exaustão total do ambiente</td>
+<td>Não</td>
+</tr>
+<tr>
+<td>Filtragem</td>
+<td>G4 + F8 + ISO 35H</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dados-do-seu-projeto-exemplo-hipotetico-sala-real-de-40-m2">Dados do Seu Projeto (exemplo hipotético — sala real de 40 m²)<a class="headerlink" href="#dados-do-seu-projeto-exemplo-hipotetico-sala-real-de-40-m2" title="Permanent link">&para;</a></h3>
+<pre><code>Comprimento: 6,0 m
+Largura: 6,7 m
+Pé-direito: 3,0 m
+Volume = 6,0 × 6,7 × 3,0 = 120,6 m³
+</code></pre>
+<h3 id="calculo-passo-a-passo">Cálculo Passo a Passo<a class="headerlink" href="#calculo-passo-a-passo" title="Permanent link">&para;</a></h3>
+<p><strong>Passo 1 — Vazão total de ar insuflado (renovação + recirculação):</strong></p>
+<pre><code>Vazão Insuflado (L/s) = (Volume × Movimentações) ÷ 3,6
+Vazão Insuflado (L/s) = (120,6 × 25) ÷ 3,6
+Vazão Insuflado (L/s) = 3.015 ÷ 3,6
+Vazão Insuflado (L/s) = 837,5 L/s
+</code></pre>
+<p><strong>Passo 2 — Vazão mínima de ar exterior (renovação):</strong></p>
+<pre><code>Vazão Renovação (L/s) = (Volume × Renovações) ÷ 3,6
+Vazão Renovação (L/s) = (120,6 × 5) ÷ 3,6
+Vazão Renovação (L/s) = 603 ÷ 3,6
+Vazão Renovação (L/s) = 167,5 L/s
+</code></pre>
+<p><strong>Passo 3 — Parcela de ar recirculado (por diferença):</strong></p>
+<pre><code>Vazão Recirculação = Vazão Insuflado − Vazão Renovação
+Vazão Recirculação = 837,5 − 167,5
+Vazão Recirculação = 670,0 L/s
+</code></pre>
+<p><strong>Passo 4 — Percentual de recirculação (informativo, útil para conversa com cliente):</strong></p>
+<pre><code>% Recirculação = (670,0 ÷ 837,5) × 100 = 80%
+</code></pre>
+<h3 id="resultado-final">Resultado Final<a class="headerlink" href="#resultado-final" title="Permanent link">&para;</a></h3>
+<pre><code>┌──────────────────────────────────────────────────┐
+│ ESPECIFICAÇÃO SALA DE CIRURGIA (40 m², 120,6 m³)  │
+├──────────────────────────────────────────────────┤
+│ Vazão Total Insuflada:     837,5 L/s (3.015 m³/h) │
+│ Renovação (ar exterior):   167,5 L/s (20% do total)│
+│ Recirculação (ar filtrado): 670,0 L/s (80% do total)│
+│ Filtragem: G4 + F8 + ISO 35H (3 estágios)          │
+│ Pressão: Positiva (referência corredor = 0)        │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Correção em relação a versões anteriores deste curso</strong>: a proporção de recirculação em sala de cirurgia (80% neste exemplo) é <strong>bem maior</strong> do que eu havia inicialmente estimado. Isso é coerente com a exigência de <strong>25 movimentações/hora</strong> — atingir esse volume só com ar novo (renovação) seria energeticamente inviável na maioria dos projetos; por isso a norma permite recirculação alta, desde que compensada pelo terceiro estágio de filtragem ISO 35H.</p>
+</blockquote>
+<hr />
+<h2 id="secao-4-caso-real-2-uti-padrao-tabela-a2">Seção 4: Caso Real 2 — UTI Padrão (Tabela A.2)<a class="headerlink" href="#secao-4-caso-real-2-uti-padrao-tabela-a2" title="Permanent link">&para;</a></h2>
+<h3 id="dados-da-norma">Dados da Norma<a class="headerlink" href="#dados-da-norma" title="Permanent link">&para;</a></h3>
+<p>Da <strong>Tabela A.2 — Internação</strong>, linha "Unidades de tratamento intensivo (não limitada a UCO, UTI e UTI Neonatal)":</p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Valor Normativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tipo</td>
+<td>PE</td>
+</tr>
+<tr>
+<td>Nível de risco</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Pressão</td>
+<td>Positiva</td>
+</tr>
+<tr>
+<td><strong>Vazão mínima de ar exterior</strong></td>
+<td><strong>2 renovações/hora</strong></td>
+</tr>
+<tr>
+<td><strong>Vazão mínima de ar insuflado</strong></td>
+<td><strong>6 movimentações/hora</strong></td>
+</tr>
+<tr>
+<td>Exaustão total</td>
+<td>Não</td>
+</tr>
+<tr>
+<td>Filtragem</td>
+<td>G4 + F8</td>
+</tr>
+<tr>
+<td>Temperatura</td>
+<td>20–24°C</td>
+</tr>
+<tr>
+<td>Umidade</td>
+<td>Máx. 60%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dados-do-projeto-uti-de-5-leitos-exemplo">Dados do Projeto (UTI de 5 leitos, exemplo)<a class="headerlink" href="#dados-do-projeto-uti-de-5-leitos-exemplo" title="Permanent link">&para;</a></h3>
+<pre><code>Dimensões: 15,0 m × 10,0 m × 3,0 m (pé-direito)
+Volume = 15,0 × 10,0 × 3,0 = 450 m³
+</code></pre>
+<h3 id="calculo">Cálculo<a class="headerlink" href="#calculo" title="Permanent link">&para;</a></h3>
+<p><strong>Vazão total insuflada:</strong></p>
+<pre><code>Vazão Insuflado = (450 × 6) ÷ 3,6 = 2.700 ÷ 3,6 = 750 L/s
+</code></pre>
+<p><strong>Vazão de renovação (ar exterior):</strong></p>
+<pre><code>Vazão Renovação = (450 × 2) ÷ 3,6 = 900 ÷ 3,6 = 250 L/s
+</code></pre>
+<p><strong>Vazão de recirculação:</strong></p>
+<pre><code>Vazão Recirculação = 750 − 250 = 500 L/s
+</code></pre>
+<p><strong>Percentual de recirculação:</strong></p>
+<pre><code>% = (500 ÷ 750) × 100 = 66,7%
+</code></pre>
+<h3 id="resultado-final_1">Resultado Final<a class="headerlink" href="#resultado-final_1" title="Permanent link">&para;</a></h3>
+<pre><code>┌──────────────────────────────────────────────────┐
+│ ESPECIFICAÇÃO UTI (5 leitos, 450 m³)              │
+├──────────────────────────────────────────────────┤
+│ Vazão Total Insuflada:     750 L/s (2.700 m³/h)   │
+│ Renovação (ar exterior):   250 L/s (33,3% do total)│
+│ Recirculação:              500 L/s (66,7% do total)│
+│ Filtragem: G4 + F8 (2 estágios — sem ISO 35H)      │
+│ Pressão: Positiva                                  │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>📌 <strong>Nota de projeto</strong>: repare que a UTI padrão (nível 2) exige menos da metade da vazão total da sala de cirurgia (750 L/s vs 837,5 L/s) apesar de ter volume quase 4× maior. Isso acontece porque a UTI usa apenas <strong>6 movimentações/hora</strong> contra <strong>25</strong> da cirurgia. A intensidade de renovação de ar é uma função direta do risco infeccioso do ambiente, não do seu tamanho.</p>
+</blockquote>
+<hr />
+<h2 id="secao-5-caso-real-3-isolamento-aii-comparando-com-e-sem-recirculacao">Seção 5: Caso Real 3 — Isolamento AII, Comparando Com e Sem Recirculação<a class="headerlink" href="#secao-5-caso-real-3-isolamento-aii-comparando-com-e-sem-recirculacao" title="Permanent link">&para;</a></h2>
+<p>Este é o caso mais didático da norma porque ela mesma oferece <strong>duas opções de projeto</strong> para o mesmo ambiente — permitindo comparar diretamente o efeito da recirculação na vazão de renovação necessária.</p>
+<h3 id="opcao-a-quarto-aii-sem-recirculacao-tabela-a2">Opção A: Quarto AII SEM recirculação (Tabela A.2)<a class="headerlink" href="#opcao-a-quarto-aii-sem-recirculacao-tabela-a2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vazão mínima ar exterior</td>
+<td><strong>12 renovações/hora</strong></td>
+</tr>
+<tr>
+<td>Vazão mínima ar insuflado</td>
+<td><strong>12 movimentações/hora</strong></td>
+</tr>
+<tr>
+<td>Filtragem</td>
+<td>G4 + F8 (2 estágios)</td>
+</tr>
+<tr>
+<td>Exaustão total</td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table>
+<p>Como renovação = movimentação = 12, <strong>100% do ar é novo, 0% recirculado</strong>.</p>
+<h3 id="opcao-b-quarto-aii-com-recirculacao-tabela-a2">Opção B: Quarto AII COM recirculação (Tabela A.2)<a class="headerlink" href="#opcao-b-quarto-aii-com-recirculacao-tabela-a2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vazão mínima ar exterior</td>
+<td><strong>2 renovações/hora</strong></td>
+</tr>
+<tr>
+<td>Vazão mínima ar insuflado</td>
+<td><strong>12 movimentações/hora</strong></td>
+</tr>
+<tr>
+<td>Filtragem</td>
+<td>G4 + F8 + ISO 35H (3 estágios)</td>
+</tr>
+<tr>
+<td>Exaustão total</td>
+<td>Não</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculo-comparativo-quarto-de-isolamento-30-m3">Cálculo Comparativo (quarto de isolamento, 30 m³)<a class="headerlink" href="#calculo-comparativo-quarto-de-isolamento-30-m3" title="Permanent link">&para;</a></h3>
+<p><strong>Opção A — Sem recirculação:</strong></p>
+<pre><code>Vazão Total = (30 × 12) ÷ 3,6 = 100 L/s
+Vazão Renovação = (30 × 12) ÷ 3,6 = 100 L/s  (100% do total)
+Vazão Recirculação = 0 L/s
+</code></pre>
+<p><strong>Opção B — Com recirculação:</strong></p>
+<pre><code>Vazão Total = (30 × 12) ÷ 3,6 = 100 L/s   (mesma vazão total!)
+Vazão Renovação = (30 × 2) ÷ 3,6 = 16,7 L/s  (16,7% do total)
+Vazão Recirculação = 100 − 16,7 = 83,3 L/s
+</code></pre>
+<h3 id="comparacao-lado-a-lado">Comparação Lado a Lado<a class="headerlink" href="#comparacao-lado-a-lado" title="Permanent link">&para;</a></h3>
+<pre><code>┌────────────────────────┬──────────────────┬──────────────────┐
+│                        │  A) Sem Recirc.  │  B) Com Recirc.  │
+├────────────────────────┼──────────────────┼──────────────────┤
+│ Vazão Total             │      100 L/s     │      100 L/s     │
+│ Ar Exterior (renovação) │      100 L/s     │      16,7 L/s    │
+│ Ar Recirculado          │        0 L/s     │      83,3 L/s    │
+│ Filtragem               │    G4 + F8       │  G4+F8+ISO35H    │
+│ Exaustão total          │       Sim        │       Não        │
+│ Custo energético (AVAC) │      Alto        │      Baixo       │
+└────────────────────────┴──────────────────┴──────────────────┘
+</code></pre>
+<p><strong>Trade-off técnico explícito</strong>: a Opção B economiza 83,3% da vazão de ar exterior que precisaria ser condicionada (aquecida/resfriada/desumidificada) — economia real de energia — mas exige o terceiro estágio de filtragem (ISO 35H, eficiência ≥99,95%) como compensação de segurança, além de sistema de exaustão de expurgo mais criterioso (o ar recirculado passa a exigir tratamento antes de retornar ao ambiente).</p>
+<hr />
+<h2 id="secao-6-balanco-de-exaustao-regra-de-massa">Seção 6: Balanço de Exaustão — Regra de Massa<a class="headerlink" href="#secao-6-balanco-de-exaustao-regra-de-massa" title="Permanent link">&para;</a></h2>
+<p>A norma não trata exaustão como "adivinhação" — ela distingue dois tipos de saída de ar (item 3.5 e 3.6):</p>
+<blockquote>
+<p><cite>"3.5 ar de exaustão: ar retirado do ambiente por meios mecânicos e rejeitado ao exterior, que não necessita de tratamento"</cite></p>
+<p><cite>"3.6 ar de expurgo: ar contaminado retirado do ambiente por meios mecânicos e rejeitado ao exterior que necessita de tratamento"</cite></p>
+</blockquote>
+<p><strong>Regra prática de balanço</strong>: em regime permanente, o que entra tem que sair — mas a norma permite (e exige, em ambientes com pressão definida) um pequeno desequilíbrio proposital:</p>
+<pre><code>Se ambiente é POSITIVO (ex: sala de cirurgia, +5 Pa):
+   Ar que entra &gt; Ar que sai
+   (o excedente &quot;vaza&quot; pelas frestas para o corredor,
+    empurrando contaminação para fora)
+
+Se ambiente é NEGATIVO (ex: quarto AII, −10 Pa):
+   Ar que sai &gt; Ar que entra
+   (o déficit é compensado por infiltração vinda do
+    corredor, &quot;puxando&quot; o ar contaminado para dentro,
+    nunca para fora)
+</code></pre>
+<p>O cálculo exato desse desequilíbrio (chamado de <strong>offset</strong>) é o tema do <strong>Módulo 3</strong> — por ora, para efeito de levantamento, retenha que a exaustão de um ambiente <strong>crítico com pressão definida nunca é exatamente igual à vazão de insuflação</strong>.</p>
+<p>Para a <strong>Tabela A.2, "Quarto AII sem recirculação"</strong>, a norma já resolve isso diretamente ao afirmar <strong>exaustão total = Sim</strong>, o que significa: toda a vazão insuflada (100 L/s no nosso exemplo) é também exaurida — mais o offset negativo que cria a despressurização. Isso confirma que, nesse caso, <strong>não há dúvida de projeto</strong>: você exausta pelo menos os 100 L/s insuflados, mais uma margem para manter a pressão negativa.</p>
+<hr />
+<h2 id="secao-7-ferramenta-pratica-planilha-de-conversao">Seção 7: Ferramenta Prática — Planilha de Conversão<a class="headerlink" href="#secao-7-ferramenta-pratica-planilha-de-conversao" title="Permanent link">&para;</a></h2>
+<p>Use este modelo para qualquer ambiente já levantado no Módulo 1:</p>
+<pre><code>═══════════════════════════════════════════════════
+CONVERSÃO RENOVAÇÃO/MOVIMENTAÇÃO → VAZÃO REAL
+═══════════════════════════════════════════════════
+
+DADOS DE ENTRADA (do Módulo 1 / Tabela A.X):
+├─ Ambiente: _______________________
+├─ Tabela/linha de origem: __________
+├─ Volume da sala (m³): _____________
+├─ Renovações/hora (ar exterior): ___
+└─ Movimentações/hora (total): ______
+
+CÁLCULOS:
+├─ Vazão Total (L/s) = (Volume × Movim.) ÷ 3,6
+│   = (_____ × _____) ÷ 3,6 = _____ L/s
+│
+├─ Vazão Renovação (L/s) = (Volume × Renov.) ÷ 3,6
+│   = (_____ × _____) ÷ 3,6 = _____ L/s
+│
+├─ Vazão Recirculação = Total − Renovação
+│   = _____ − _____ = _____ L/s
+│
+└─ % Recirculação = (Recirc. ÷ Total) × 100
+    = _____ %
+
+VERIFICAÇÃO:
+├─ Se Renovação = Movimentação → 0% recirculação (100% ar novo)
+├─ Se % Recirculação &gt; 0% → confirmar filtragem 3 estágios
+   (verificar exigência de ISO 35H na tabela de origem)
+└─ Exaustão total = Sim/Não (copiar da tabela — define
+   estratégia do Módulo 3)
+═══════════════════════════════════════════════════
+</code></pre>
+<hr />
+<h2 id="secao-8-checkpoint-valide-seu-aprendizado">Seção 8: Checkpoint — Valide Seu Aprendizado<a class="headerlink" href="#secao-8-checkpoint-valide-seu-aprendizado" title="Permanent link">&para;</a></h2>
+<h3 id="pergunta-1">Pergunta 1<a class="headerlink" href="#pergunta-1" title="Permanent link">&para;</a></h3>
+<p><strong>Qual a diferença exata, segundo a definição normativa (item 3.20/3.21), entre "renovação" e "movimentação" de ar?</strong></p>
+<p><strong>Resposta</strong>: Renovação (3.21) conta <strong>apenas ar exterior</strong> introduzido no ambiente ÷ volume. Movimentação (3.20) conta <strong>todo</strong> ar insuflado (exterior + recirculado) ÷ volume. Movimentação é sempre ≥ renovação.</p>
+<h3 id="pergunta-2-calculo">Pergunta 2 — Cálculo<a class="headerlink" href="#pergunta-2-calculo" title="Permanent link">&para;</a></h3>
+<p><strong>Uma sala de procedimento (Tabela A.3: PE, nível 2, 3 renovações/h, 15 movimentações/h) tem 25 m² e pé-direito de 2,8 m. Calcule vazão total, renovação e recirculação em L/s.</strong></p>
+<p><strong>Resposta</strong>:</p>
+<pre><code>Volume = 25 × 2,8 = 70 m³
+Vazão Total = (70 × 15) ÷ 3,6 = 291,7 L/s
+Vazão Renovação = (70 × 3) ÷ 3,6 = 58,3 L/s
+Vazão Recirculação = 291,7 − 58,3 = 233,4 L/s
+% Recirculação = 80%
+</code></pre>
+<h3 id="desafio-pratico">Desafio Prático<a class="headerlink" href="#desafio-pratico" title="Permanent link">&para;</a></h3>
+<p><strong>Você está orçando dois cenários para um quarto de isolamento AII de 35 m³: (A) sem recirculação, (B) com recirculação. Calcule a vazão de ar exterior de cada opção e explique, em uma frase, por que a Opção B tem custo energético menor mas custo de filtragem maior.</strong></p>
+<p><strong>Solução esperada</strong>:</p>
+<pre><code>Opção A (12 renovações/h = 12 movimentações/h):
+  Vazão Renovação = (35 × 12) ÷ 3,6 = 116,7 L/s (100% ar novo)
+
+Opção B (2 renovações/h, 12 movimentações/h):
+  Vazão Renovação = (35 × 2) ÷ 3,6 = 19,4 L/s (só 16,7% ar novo)
+  Vazão Recirculação = (35×12)÷3,6 − 19,4 = 96,9 L/s
+
+Explicação: a Opção B precisa condicionar (aquecer/resfriar/
+desumidificar) apenas 19,4 L/s de ar novo contra 116,7 L/s da 
+Opção A — reduzindo drasticamente o consumo de energia da UTA. 
+Em compensação, os 96,9 L/s recirculados passam pelo terceiro 
+estágio de filtragem ISO 35H (≥99,95% de eficiência), que a 
+Opção A dispensa — daí o custo maior de filtros e sua manutenção.
+</code></pre>
+<hr />
+<h2 id="glossario-do-modulo-2">Glossário do Módulo 2<a class="headerlink" href="#glossario-do-modulo-2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição Oficial (NBR 7256:2021)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vazão de ar</strong></td>
+<td>Volume de ar por unidade de tempo (item 3.31)</td>
+</tr>
+<tr>
+<td><strong>Ar insuflado</strong></td>
+<td>Quantidade de ar suprido por meios mecânicos a um espaço (item 3.8)</td>
+</tr>
+<tr>
+<td><strong>Ar exterior</strong></td>
+<td>Ar captado na parte externa da edificação (item 3.7)</td>
+</tr>
+<tr>
+<td><strong>Ar de retorno</strong></td>
+<td>Ar retirado do ambiente que pode ser recirculado ou rejeitado (item 3.10)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="referencias-normativas-do-modulo-2">Referências Normativas do Módulo 2<a class="headerlink" href="#referencias-normativas-do-modulo-2" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>ABNT NBR 7256:2021</strong>, item 3.20 e 3.21 — Definições de movimentação e renovação de ar.</li>
+<li><strong>ABNT NBR 7256:2021</strong>, item 3.5 e 3.6 — Definições de ar de exaustão e ar de expurgo.</li>
+<li><strong>ABNT NBR 7256:2021</strong>, Anexo A, Tabelas A.2 e A.3 — Valores reais usados nos exemplos deste módulo.</li>
+<li><strong>ABNT NBR 7256:2021</strong>, item 7.1 e 7.2 — Renovação do ar e Recirculação do ar (requisitos gerais).</li>
+</ol>
+<hr />
+<h2 id="proximo-modulo">Próximo Módulo<a class="headerlink" href="#proximo-modulo" title="Permanent link">&para;</a></h2>
+<p>No <strong>Módulo 3: Pressurização e Controle de Fluxo de Ar</strong>, usaremos a vazão de insuflação calculada aqui como base para determinar o <strong>offset de exaustão</strong> necessário — a diferença exata entre entrada e saída de ar que cria e mantém a pressão diferencial (positiva ou negativa) especificada na tabela.</p>
+<hr />
+<p><strong>Módulo 2 Concluído ✓ (Verificado)</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
