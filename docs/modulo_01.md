@@ -1,8 +1,11 @@
 # Módulo 1: Levantamento de Dados e Programa de Necessidades HVAC
+### ⚠️ Versão 2.0 — Revisado com texto integral de NBR 7256:2021 e RDC 50/2002
+
+---
 
 ## Resumo Executivo
 
-Antes de desenhar qualquer sistema HVAC, você precisa **ouvir a instituição** e traduzir necessidades médicas, operacionais e arquitetônicas em especificações técnicas. Este módulo ensina o processo sistemático de coleta de informações, criação de matriz de requisitos e rastreabilidade, garantindo que nenhum detalhe escape antes do projeto começar.
+Levantar dados para um projeto HVAC hospitalar não é "inventar" um formulário — é replicar, ambiente por ambiente, exatamente as colunas que as **Tabelas A.1 a A.7** (Anexo A, normativo, da NBR 7256:2021) já definem. Este módulo ensina você a usar a própria estrutura da norma como seu formulário de levantamento, e a identificar quando um ambiente do seu projeto real corresponde a qual linha da norma.
 
 ---
 
@@ -10,568 +13,291 @@ Antes de desenhar qualquer sistema HVAC, você precisa **ouvir a instituição**
 
 Ao final deste módulo, você será capaz de:
 
-- **Coletar** informações completas sobre instituição, ocupação, equipamentos e sensibilidades
-- **Classificar** ambientes hospitalares por tipologia (cirúrgicos, UTIs, isolamentos, etc.)
-- **Identificar** requisitos especiais (fluxo laminar, pressurização, filtragem aumentada)
-- **Criar** matriz de rastreabilidade (requisito → elemento HVAC)
-- **Comunicar-se** efetivamente com equipes médicas, arquitetos e engenheiros
-- **Documentar** programa de necessidades conforme RDC 50
+- **Localizar**, nas 7 tabelas do Anexo A, o ambiente correspondente ao que está projetando
+- **Extrair** de cada tabela os 7 parâmetros obrigatórios de projeto
+- **Identificar** ambientes que a norma não cobre diretamente (e o que fazer nesses casos)
+- **Aplicar** as notas de rodapé de cada tabela (elas mudam a interpretação dos valores)
+- **Montar** uma matriz de rastreabilidade ligando seu levantamento de campo às tabelas oficiais
 
 ---
 
 ## Pré-requisitos
 
-- Módulo 0 (Fundamentos Regulatórios) - conceitos de classificação de ambientes
-- Noções básicas de ocupação, equipamentos médicos
-- Disposição de fazer "lição de casa" com hospital/instituição
+- Módulo 0 (Classificação PE/AII/AO/AA, níveis de risco 0–3, situação a controlar AgB/AgQ/AgR/TE/EQ)
 
 ---
 
-## Seção 1: Por Que Levantamento de Dados Importa?
+## Seção 1: A Estrutura Real do Anexo A — Suas 7 Tabelas de Trabalho
 
-### O Problema: Projetos Falhando por Informação Incompleta
+A NBR 7256:2021 organiza os ambientes hospitalares em **sete tabelas normativas**, cada uma cobrindo um bloco funcional do hospital:
 
-**Cenário Real**: Um hospital contratou projetista HVAC que não perguntou detalhes suficientes. Resultado:
-- Sala cirúrgica foi projetada sem saber que havia **foco cirúrgico de 400W** = ganho térmico extra
-- UTI não previu **equipamentos de precisão** que geram calor = temperatura incontrolável
-- Isolamento não considerou que haveria **pacientes muito graves** = exigências de redundância ignoradas
+| Tabela | Bloco Funcional | Exemplos de Ambientes |
+|--------|------------------|-------------------------|
+| **A.1** | Unidade de atendimento imediato — Emergência e urgência | Recepção, triagem, sala de inalação, sala vermelha |
+| **A.2** | Internação e unidade de queimados | Quartos PE/AII, UTI, enfermaria, UIQ |
+| **A.3** | Centro cirúrgico (CC) | Corredor CC, antecâmara, sala de cirurgia, recuperação |
+| **A.4** | Central de material esterilizado | Área suja, desinfecção, esterilização, armazenagem |
+| **A.5** | Diagnóstico e terapia | Hemodinâmica, endoscopia, anatomia patológica, radioterapia, radiologia |
+| **A.6** | Apoio técnico/apoio logístico | Farmácia, lactário, lavanderia, limpeza |
+| **A.7** | Ambientes diversos | Sala de parto, banheiros, ambientes odontológicos |
 
-**Custo**: Reforma pós-obra = R$ 150 mil + atraso de 3 meses.
-
-**Lição**: **10 horas de levantamento economizam 100 horas de retrabalho.**
-
----
-
-### Responsabilidade Técnica (NBR 7256 e RDC 50)
-
-**RDC 50, Apêndice C** exige que projeto HVAC seja baseado em "programa de necessidades" definido colaborativamente com:
-- Equipe médica (requisitos clínicos)
-- Arquitetura (espaço disponível)
-- Engenharia (viabilidade técnica)
-
-**Sua responsabilidade** é garantir rastreabilidade: cada requisito tem origem, justificativa e elemento HVAC correspondente.
-
-**Documentação**: Matriz de requisitos é deliverable obrigatório e auditável.
+**Cada tabela tem exatamente as mesmas 8 colunas.** Uma vez que você entende a estrutura, o levantamento vira um processo mecânico de "encontrar a linha certa".
 
 ---
 
-## Seção 2: Processo Sistemático de Levantamento
+## Seção 2: As 8 Colunas Obrigatórias (Sua Ficha de Levantamento)
 
-### Passo 1: Informações Gerais da Instituição
+Todas as tabelas do Anexo A seguem este formato — **use isto como seu formulário de campo**:
 
-**O que perguntar:**
+```
+┌─────────────────────────────────────────────────────────────┐
+│ FICHA DE LEVANTAMENTO POR AMBIENTE                           │
+├─────────────────────────────────────────────────────────────┤
+│ 1. Nome do Ambiente: ___________________________            │
+│                                                                │
+│ 2. Tipo (Tabela da norma): [ ] PE  [ ] AII  [ ] AO  [ ] AA   │
+│                                                                │
+│ 3. Nível de Risco: [ ] 1  [ ] 2  [ ] 3                       │
+│                                                                │
+│ 4. Situação a Controlar: [ ]AgB [ ]AgQ [ ]AgR [ ]TE [ ]EQ    │
+│    (pode ter mais de uma, ex: AgB+AgQ)                       │
+│                                                                │
+│ 5. Nível de Pressão: [ ] Positiva [ ] Negativa [ ] Neutra    │
+│                                                                │
+│ 6. Vazão mín. ar exterior (renovações/hora): _____ h⁻¹       │
+│                                                                │
+│ 7. Vazão mín. ar insuflado (movimentações/hora): _____ h⁻¹   │
+│                                                                │
+│ 8. Exaustão total do ambiente: [ ] Sim  [ ] Não              │
+│                                                                │
+│ 9. Classe de filtragem do ar insuflado: __________            │
+│                                                                │
+│ 10. Temperatura (°C): ______ a ______                        │
+│                                                                │
+│ 11. Umidade Relativa: máx. _____%                            │
+└─────────────────────────────────────────────────────────────┘
+```
 
-| Informação | Por Quê | Exemplo |
-|-----------|--------|---------|
-| **Nome e localização** | Clima (altitude, temperatura externa) | Hospital X, São Paulo, 750m |
-| **Tamanho (leitos)** | Escala do projeto | 100, 250, 500 leitos |
-| **Estágio do projeto** | Novo vs reforma | Novo construção vs reforma pós-2020 |
-| **Orçamento estimado** | Determina nível de sofisticação | R$ 500k vs R$ 2M |
-| **Prazos** | Impacta escolha de equipamentos | 6 meses vs 18 meses |
-| **Histórico de problemas** (se reforma) | Diagnóstico de falhas passadas | "UTI com temperatura instável" |
+**Passo prático**: para cada ambiente do seu projeto, primeiro você tenta **encontrá-lo literalmente** em uma das 7 tabelas. Se encontrar, copia os 11 campos diretamente. Só entra em julgamento técnico próprio quando o ambiente **não** está listado (ver Seção 5).
 
 ---
 
-### Passo 2: Tipologia de Ambientes e Ocupação
+## Seção 3: Exemplo Real — Preenchendo a Ficha com Dados da Tabela A.3
 
-Para CADA ambiente, coletar:
+Vamos fazer o levantamento de um **Centro Cirúrgico** usando dados reais extraídos da Tabela A.3 da norma.
 
-#### **Informação 2.1: Identificação Básica**
-
-```
-Ambiente: Sala Cirúrgica 1
-├─ Localização: Bloco Cirúrgico, Pavimento 2
-├─ Área: 40 m²
-├─ Pé-direito: 3.0 m
-├─ Revestimentos: Piso vinílico antisséptico, paredes pintura epóxi
-└─ Porta: Dupla (circulação → antecâmara → sala)
-```
-
-#### **Informação 2.2: Ocupação**
+### Ambiente 1: Sala de Cirurgia
 
 ```
-Ocupação Normal: 6 pessoas (cirurgião, auxiliar, anestesista, 2 técnicos, paciente)
-Ocupação Máxima: 8 pessoas (ensino/treinamento)
-Tempo médio de permanência: 2-4 horas
-Frequência: 5-8 cirurgias/dia
+1. Nome: Sala de Cirurgia
+2. Tipo: PE
+3. Nível de Risco: 3
+4. Situação a Controlar: AgB + AgQ + AgR
+   (biológico, químico [gases anestésicos] e radiológico [se houver raio-X móvel])
+5. Nível de Pressão: Positiva
+6. Vazão mín. ar exterior: 5 renovações/hora
+7. Vazão mín. ar insuflado: 25 movimentações/hora
+8. Exaustão total: Não
+9. Classe de filtragem: G4 + F8 + ISO 35H
+10. Temperatura: 20 a 24°C
+11. Umidade Relativa: máx. 60%
 ```
 
-**Por quê**: Ocupação determina geração de CO₂, calor corporal, contaminação microbiológica.
-
-#### **Informação 2.3: Equipamentos Geradores de Calor**
+### Ambiente 2: Antecâmara (acesso à sala cirúrgica)
 
 ```
-Equipamento | Potência | Tempo Operação | Modo Ejeção
-------------|----------|----------------|------------
-Foco cirúrgico | 400W | Durante cirurgia | Calor radiante
-Eletrocautério | 200W | Intermitente | Calor + fumaça
-Monitor + registrador | 100W | Contínuo | Calor convectivo
-Bomba infusora | 50W | Variável | Calor baixo
-Sistema de aspiração | 150W | Intermitente | Sucção
+1. Nome: Antecâmara
+2. Tipo: AO
+3. Nível de Risco: 3
+4. Situação a Controlar: AgB
+5. Nível de Pressão: Positiva
+6. Vazão mín. ar exterior: 5 renovações/hora
+7. Vazão mín. ar insuflado: 25 movimentações/hora
+8. Exaustão total: Não
+9. Classe de filtragem: G4 + F8 + ISO 35H
+10. Temperatura: 20 a 24°C
+11. Umidade Relativa: máx. 60%
 ```
 
-**Por quê**: Define carga térmica sensível. Determina capacidade de resfriamento necessária.
+### Ambiente 3: Corredor/Circulação do Centro Cirúrgico
+
+```
+1. Nome: Corredor/Circulação CC
+2. Tipo: AO
+3. Nível de Risco: 1
+4. Situação a Controlar: AgB
+5. Nível de Pressão: Positiva
+6. Vazão mín. ar exterior: 2 renovações/hora
+7. Vazão mín. ar insuflado: 6 movimentações/hora
+8. Exaustão total: Não
+9. Classe de filtragem: G4 + F8
+10. Temperatura: 20 a 24°C
+11. Umidade Relativa: máx. 60%
+```
+
+**Observação de projeto**: repare que a **antecâmara** exige a MESMA vazão que a sala de cirurgia (5 renovações/25 movimentações) — isto não é coincidência. A norma trata a antecâmara como extensão do ambiente crítico, não como um corredor comum.
 
 ---
 
-### Passo 3: Sensibilidades e Requisitos Especiais
+## Seção 4: Notas de Rodapé — A Parte Que Ninguém Lê (Mas Muda o Projeto)
 
-**Perguntas-chave:**
+As tabelas do Anexo A têm notas de rodapé que **alteram a leitura direta dos números**. Aqui estão as mais importantes, extraídas literalmente da norma:
 
-#### **3.1: Controle Ambiental Especial?**
+### Nota sobre Antecâmaras e Pressão (Tabela A.3)
 
-- [ ] Fluxo laminar (cirurgia, UTI neonatal, transplante)?
-- [ ] Umidade relativa controlada (farmácia de medicamentos instáveis)?
-- [ ] Temperatura criogênica (laboratório)?
-- [ ] Isolamento acústico especial?
+> <cite>"A pressão do corredor do centro cirúrgico deve ser positiva em relação aos ambientes adjacentes, desde que não sejam as salas cirúrgicas." / "A pressão da antecâmara (tipo bolha) deve ser sempre positiva em relação à sala de cirurgia como também em relação ao corredor."</cite>
 
-**Exemplo**: 
-```
-"Sim, sala de cirurgia pediátrica requer fluxo laminar 
-descendente para reduzir risco de infecção neonatal"
-```
+**Implicação**: você não pode simplesmente somar +5 Pa em tudo. A hierarquia de pressão é: **antecâmara > sala de cirurgia > corredor** (quando com antecâmara tipo bolha).
 
-#### **3.2: Pacientes Imunocomprometidos?**
+### Nota sobre Anestesia em Sala de Cirurgia (6.2.2.3.2)
 
-- [ ] Transplantados
-- [ ] Pacientes com câncer em quimioterapia
-- [ ] Prematuros extremos
-- [ ] HIV+
+> <cite>"A anestesia pode ser administrada em uma sala de cirurgia, desde que os dispositivos adequados para administração de gases anestésicos estejam presentes no ambiente e que um sistema de extração e eliminação do excesso desses gases anestésicos esteja disponível."</cite>
 
-**Impacto**: Requer pressão positiva aumentada + filtração HEPA obrigatória.
+**Implicação para o levantamento**: se a sala de cirurgia terá anestesia local, você **precisa** perguntar sobre sistema de extração de gases anestésicos — isso não aparece automaticamente na tabela, é um requisito condicional.
 
-#### **3.3: Riscos Infecciosos Específicos?**
+### Nota sobre Fluxo de Ar em Sala de Cirurgia
 
-- [ ] Tuberculose (comum na instituição?)
-- [ ] COVID-19
-- [ ] Varicela (catapora)
-- [ ] Patógenos multi-resistentes
+> <cite>"Em salas de cirurgia, a insuflação do ar deve ser projetada de forma a minimizar a turbulência sobre a mesa cirúrgica [...] utilizando o fluxo unidirecional, com velocidade do ar entre 0,2 m/s e 0,3 m/s."</cite>
 
-**Impacto**: Exige isolamento respiratório com pressão negativa.
+> <cite>"O ar de retorno [...] deve ser captado por grelhas situadas nos quatro cantos da periferia do recinto [...] A maior parte do ar retirado, aproximadamente 70 %, deve ser captada por grelhas com a sua borda inferior a 20 cm acima do piso e o restante com a borda superior a 10 cm abaixo do forro."</cite>
 
-#### **3.4: Fumigação/Desinfecção Periódica?**
+**Implicação**: isso é informação de **projeto físico** (Módulo 7 do curso), mas precisa ser levantada AGORA, porque define se a sala tem espaço físico para 4 grelhas de retorno nos cantos.
 
-- [ ] Necessário?
-- [ ] Frequência?
-- [ ] Agentes químicos usados?
+### Nota sobre "Posto de Enfermagem" (recorrente em várias tabelas)
 
-**Impacto**: Dutos devem ser estanques, selados, acessíveis para limpeza.
+> <cite>"Recomenda-se que o posto de enfermagem atenda aos mesmos parâmetros do ambiente no qual este estiver inserido."</cite>
+
+**Implicação prática**: você não vai achar "posto de enfermagem" como linha própria na maioria das tabelas — ele **herda** os parâmetros do ambiente onde está fisicamente localizado. Se o posto fica dentro da UTI, aplica-se a especificação da UTI.
+
+### Nota sobre Faixas de Temperatura (recorrente)
+
+> <cite>"As temperaturas indicadas são referenciais, podendo ser alteradas, dentro da faixa indicada, em função da necessidade da equipe médica."</cite>
+
+**Implicação**: a temperatura não é rígida como pressão/filtragem — há flexibilidade dentro da faixa, sujeita a decisão clínica. Documente no levantamento se a equipe médica tem preferência específica.
 
 ---
 
-### Passo 4: Integração com Infraestrutura Existente
+## Seção 5: Quando o Ambiente NÃO Está na Tabela
 
-**Perguntas técnicas:**
+Nem todo ambiente hospitalar tem linha própria nas 7 tabelas. A norma prevê isso explicitamente para alguns casos — veja o exemplo de Diagnóstico por Imagem (Tabela A.5, nota de rodapé):
+
+> <cite>"Para as unidades e ambientes de Diagnósticos/Terapias que não foram citados nesta tabela, como tomografia, ultrassonografia, ressonância magnética e Pet-CT, recomenda-se utilizar os parâmetros de projeto definidos pelos fabricantes dos equipamentos, com base nas condições operacionais destes equipamentos bem como considerar as condições de conforto e saúde dos usuários."</cite>
+
+**Protocolo para ambiente não listado**:
 
 ```
-Sistema existente (se reforma):
-├─ Qual HVAC está em operação?
-├─ Qual será substituído vs mantido?
-├─ Conexões com sistema central?
-└─ Pontos de tomada de ar exterior disponíveis?
+1. Verifique se existe ambiente ANÁLOGO em outra tabela
+   (ex: "sala de exame" genérica aparece em A.5)
 
-Infraestrutura predial:
-├─ Chaminés/exaustão central?
-├─ Espaço disponível para sala de máquinas?
-├─ Capacidade estrutural para peso de equipamentos?
-└─ Espaço de dutos (forro, paredes)?
+2. Se envolve equipamento médico de grande porte
+   (ressonância, tomógrafo, acelerador linear):
+   → Consulte especificação técnica do FABRICANTE primeiro
+   → Depois aplique bom senso clínico (conforto, segurança)
 
-Utilidades:
-├─ Alimentação elétrica disponível (trifásico)?
-├─ Água/drenagem para condensado?
-├─ Gás (se necessário)?
-└─ Vapor (se necessário)?
+3. Se envolve situação de biossegurança especial
+   (ex: laboratório NB3):
+   → NBR 7256 NÃO se aplica (ver Módulo 0, Seção 1)
+   → Consulte normas de biocontenção específicas
+
+4. Documente a decisão na matriz de rastreabilidade,
+   citando a fonte usada (fabricante, norma análoga, etc.)
 ```
+
+### Caso Especial: Ressonância Magnética
+
+A RDC 50 (parte de laboratórios/equipamentos especiais, referenciada também em NBR 7256, item 6.5) traz um alerta específico:
+
+> <cite>"No caso de equipamentos de ressonância magnética, que possuam descarga para a atmosfera de substâncias a baixa temperatura, como Hélio líquido a −269,0 ºC, deve ser motivo de extremo cuidado o local, a forma e a direção da descarga deste para evitar que seu jato, quando e se ocorrer, não atinja local com pessoas ou empena de edifício."</cite>
+
+**Implicação para o levantamento**: se o projeto envolve sala de ressonância magnética, você precisa perguntar especificamente sobre o sistema de quench (descarga de emergência de hélio) e sua rota de saída — isso é um item de levantamento que não aparece em nenhuma tabela padrão.
 
 ---
 
-## Seção 3: Matriz de Rastreabilidade (Requisito → HVAC)
+## Seção 6: Matriz de Rastreabilidade — Consolidando o Levantamento
 
-Esta é a **ferramenta mais importante** do levantamento.
+Depois de preencher a ficha de cada ambiente, consolide numa matriz única. Aqui está um exemplo real e completo para um pequeno centro cirúrgico (dados 100% extraídos da Tabela A.3):
 
-### Estrutura
+| Ambiente | Tipo | Nível | Pressão | Renov. Ext. (h⁻¹) | Insufl. Total (h⁻¹) | Exaustão | Filtragem | Fonte |
+|----------|------|-------|---------|---------------------|------------------------|----------|-----------|-------|
+| Corredor/circulação CC | AO | 1 | Positiva | 2 | 6 | Não | G4+F8 | Tab. A.3 |
+| Sala/área indução anestésica | AO | 1 | Neutra | 2 | 6 | Não | G4+F8 | Tab. A.3 |
+| Antecâmara acesso à sala cirúrgica | AO | 3 | Positiva | 5 | 25 | Não | G4+F8+ISO35H | Tab. A.3 |
+| Sala de cirurgia | PE | 3 | Positiva | 5 | 25 | Não | G4+F8+ISO35H | Tab. A.3 |
+| Sala de procedimento | PE | 2 | Positiva | 3 | 15 | Não | G4+F8 | Tab. A.3 |
+| Sala de apoio às cirurgias especializadas | PE | 3 | Neutra | 5 | 25 | Não | G4+F8+ISO35H | Tab. A.3 |
+| Sala/área de recuperação anestésica | AO | 1 | Neutra | 2 | 6 | Não | G4+F8 | Tab. A.3 |
+| Sala de guarda e preparo de anestésicos | AO | 1 | Negativa | 8 | 8 | Sim | G4+F8 | Tab. A.3 |
 
-```
-ID | Fonte | Ambiente | Requisito Clínico | Elemento HVAC | Norma
----|-------|----------|-------------------|---------------|------
-1  | Médico| Cirurgia | Reduzir infecção de sítio cirúrgico | Pressão +20 Pa | NBR 7256
-2  | Médico| Cirurgia | Eliminar fumaça eletrocautério | Exaustão localizada | RDC 50
-3  | Arqtº | Cirurgia | Espaço limite 40m² | Vazão máxima 500 L/s | Cálculo
-4  | Equip| Cirurgia | Foco gera 400W | Resfriamento +5% | Carga térmica
-5  | NBR  | Cirurgia | Requisito mínimo | 15 trocas/hora, G4+F7+H13 | NBR 7256
-```
-
-### Exemplo Prático Resolvido
-
-**Ambiente: UTI Geral, 80 m² (4 leitos de 20 m² cada)**
-
-#### **Levantamento de Dados**
-
-```
-Ocupação: 4 pacientes críticos + 8 profissionais de saúde
-Equipamentos/leito:
-  - Monitor cardíaco: 50W
-  - Ventilador mecânico: 100W
-  - Bomba infusora: 50W
-  - Cama aquecida: 200W
-  - Total/leito: ~400W × 4 = 1.600W
-
-Requisitos clínicos:
-  - Pacientes imunocomprometidos: SIM
-  - Risco de infecção aérea: MODERADO
-  - Necessidade de isolamento: ALGUNS LEITOS
-  - Umidade crítica: 45-55% (equipamentos de precisão)
-
-Infraestrutura:
-  - Pé-direito: 3.0 m
-  - Forro: 2.6 m (espaço de plenum disponível)
-  - Sala de máquinas: 30 m² próxima
-  - Tomada de ar: Fachada norte, distante 50m
-```
-
-#### **Matriz de Rastreabilidade Resultante**
-
-| ID | Requisito | Origem | Elemento HVAC | Justificativa | Norma |
-|----|-----------|--------|---------------|--------------|-------|
-| U1 | Pressão positiva +6 a +12 Pa | Médico | Regulador de pressão + sensor | Proteção contra contaminação externa | NBR 7256 |
-| U2 | Renovação 12 trocas/hora | NBR 7256 | UTA com vazão mínima 900 L/s | Requisito crítico | NBR 7256 Tab.X |
-| U3 | Filtração F7 mínimo | NBR 7256 | 2 estágios: G4 + F7 | Remover 99% de particulados | NBR 7256 |
-| U4 | Umidade 45-55% | Equipamento | Umidificador + desumidificador | Evitar condensação em equipamentos | Engenharia |
-| U5 | Temperatura 20-24°C ±1°C | Médico | Termostato +/- 0.5°C | Conforto + precisão de equipamentos | Clínica |
-| U6 | Redundância em crítico | RDC 50 | UTA dupla (N+1) | Se falha UTA 1, UTA 2 assume | RDC 50 Ap.C |
-| U7 | Isolar leito 3 (COVID) | Médico | Damper de isolamento | Segregar fluxo de ar do leito | Improviso |
-| U8 | Carga térmica +1.600W | Cálculo | Resfriamento mínimo 8 kW | Equipamentos + calor corporal | Termo |
+**Esta tabela é seu deliverable formal de levantamento.** Ela alimenta diretamente o Módulo 2 (cálculo de vazões em L/s) — você já tem os dados normativos; falta apenas multiplicar pelo volume real de cada sala do seu projeto específico.
 
 ---
 
-## Seção 4: Ferramenta Prática - Checklist de Levantamento
+## Seção 7: Checkpoint — Valide Seu Aprendizado
 
-Use este checklist em TODA visita à instituição:
+### Pergunta 1
+
+**Durante o levantamento de uma clínica, você encontra uma "sala de exame de broncoscopia". Em qual tabela do Anexo A ela está, e qual é seu nível de risco e situação a controlar?**
+
+**Resposta**: Tabela A.5 (Diagnóstico e terapia), bloco Endoscopia. **AO, nível de risco 2, situação AgB**. Pressão negativa, 2 renovações/hora ar exterior, 12 movimentações/hora insuflado, **exaustão total: Sim**, filtragem G4+F8.
+
+### Pergunta 2
+
+**Você está levantando dados de uma sala de ressonância magnética nova. A Tabela A.5 tem uma linha específica para "Sala de Ressonância Magnética"?**
+
+**Resposta**: **Não.** Conforme nota de rodapé da Tabela A.5, ressonância magnética não está listada — deve-se usar os parâmetros do fabricante do equipamento. Além disso, é obrigatório levantar informação sobre o **sistema de quench** (descarga de hélio líquido a −269°C) e garantir rota de saída segura, conforme alerta específico da norma (item 6.5).
+
+### Desafio Prático
+
+**Monte a ficha de levantamento completa (11 campos) para "Quarto AII sem recirculação, com antecâmara" usando os dados reais da Tabela A.2 apresentados no Módulo 0.**
+
+**Solução esperada**:
 
 ```
-═══════════════════════════════════════════════════════════
-CHECKLIST DE LEVANTAMENTO HVAC
-Instituição: ___________________  Data: ___________
-Projetista: ____________________  Assinado: _______
-═══════════════════════════════════════════════════════════
+1. Nome: Quarto AII sem recirculação, com antecâmara
+2. Tipo: AII
+3. Nível de Risco: 3
+4. Situação a Controlar: AgB
+5. Nível de Pressão: Negativa
+6. Vazão mín. ar exterior: 12 renovações/hora
+7. Vazão mín. ar insuflado: 12 movimentações/hora
+8. Exaustão total: Sim
+9. Classe de filtragem: G4 + F8
+10. Temperatura: 20 a 24°C
+11. Umidade Relativa: máx. 60%
 
-SEÇÃO 1: INFORMAÇÕES GERAIS
-─────────────────────────────
-[ ] Nome, endereço, localização (GPS, altitude)
-[ ] Tamanho (número de leitos, blocos, pavimentos)
-[ ] Tipo (hospital, clínica, UPA, pronto-socorro)
-[ ] Estágio do projeto (novo, reforma, ampliação)
-[ ] Orçamento estimado (R$ ou faixa)
-[ ] Prazos (início, conclusão)
-[ ] Contato técnico (engenheiro da instituição, diretor)
-[ ] Histórico de problemas HVAC (se aplicável)
-
-SEÇÃO 2: TIPOLOGIA DE AMBIENTES
-────────────────────────────────
-Para cada ambiente crítico/semi-crítico:
-
-Ambiente: _______________________
-[ ] Área (m²), pé-direito (m), volume
-[ ] Localização (pavimento, proximidade)
-[ ] Revestimentos (piso, paredes, teto)
-[ ] Portas (simples, dupla, com antecâmara?)
-[ ] Ocupação normal e máxima
-[ ] Equipamentos e potência (W)
-[ ] Tempo de operação (h/dia)
-[ ] Sensibilidades especiais (fluxo laminar? isolamento?)
-
-[Repetir para CADA ambiente]
-
-SEÇÃO 3: REQUISITOS ESPECIAIS
-──────────────────────────────
-[ ] Fluxo laminar necessário? SIM / NÃO
-[ ] Pacientes imunocomprometidos? SIM / NÃO
-[ ] Risco de TB, COVID, varicela? SIM / NÃO
-[ ] Fumigação periódica? SIM / NÃO
-[ ] Controle de umidade crítico? SIM / NÃO
-[ ] Isonomia térmica (±1°C)? SIM / NÃO
-[ ] Redundância (N+1) exigida? SIM / NÃO
-
-SEÇÃO 4: INFRAESTRUTURA
-───────────────────────
-[ ] Sistema HVAC existente (marca, ano, estado)
-[ ] Sala de máquinas (tamanho, localização, acessibilidade)
-[ ] Tomada de ar (localização, distância de exaustão, filtração)
-[ ] Dutos existentes (tamanho, material, estado)
-[ ] Utilidades (energia trifásica, água, gás, vapor)
-[ ] Estrutura (piso radiante, forro, paredes removíveis)
-[ ] Espaço de plenum (altura, uso atual)
-
-SEÇÃO 5: INTEGRAÇÕES
-────────────────────
-[ ] Conhecer arquiteto do projeto
-[ ] Conhecer engenheiro estrutural
-[ ] Conhecer engenheiro elétrico
-[ ] Conhecer médico responsável (clínica)
-[ ] Conhecer engenheiro de controle/infecção
-[ ] Verificar prazos com todos
-[ ] Documentar conflitos potenciais
-
-SEÇÃO 6: FOTOGRAFIA E DOCUMENTAÇÃO
-───────────────────────────────────
-[ ] Fotos de ambientes principais
-[ ] Fotos de sala de máquinas (existente ou local)
-[ ] Fotos de fachada (tomadas de ar, exaustão)
-[ ] Fotos de plantas arquitetônicas (obtidas)
-[ ] Documentos normativos (RDC 50 local, códigos estaduais)
-
-SEÇÃO 7: ASSINATURA
-───────────────────
-Levantamento realizado: _____/_____/_______
-Projetista: ____________________________
-Responsável institucional: _______________
+Observação adicional: por ser "sem recirculação", 100% do 
+ar é ar exterior (renovação = movimentação = 12 h⁻¹). Se o 
+projeto trocasse para "com recirculação", a renovação cairia 
+para 2 h⁻¹, mas a filtragem subiria obrigatoriamente para 
+G4+F8+ISO35H (3º estágio compensa a recirculação).
 ```
 
 ---
 
-## Seção 5: Comunicação com Equipes Interdisciplinares
+## Glossário Adicional do Módulo 1
 
-### Exemplo de Reunião de Kickoff (Projeto)
-
-**Participantes**: Médico-chefe, Arquiteto, Eng. HVAC (você), Eng. Elétrico, Eng. Estrutural
-
-**Agenda**:
-
-```
-1. Apresentação de objetivos (15 min)
-   ├─ Escopo do projeto
-   ├─ Prazos
-   └─ Orçamento
-
-2. Requisitos médicos (30 min)
-   ├─ Médico apresenta necessidades clínicas
-   ├─ Você faz perguntas técnicas
-   └─ Documenta em matriz
-
-3. Restrições arquitetônicas (20 min)
-   ├─ Arquiteto apresenta layout
-   ├─ Espaço disponível para HVAC
-   ├─ Interferências
-   └─ Você identifica conflitos
-
-4. Infraestrutura existente (15 min)
-   ├─ Elétrico: disponibilidade de carga
-   ├─ Estrutural: peso máximo, espaço
-   ├─ Utilities: água, gás, vapor
-   └─ Definir upgrade necessário
-
-5. Cronograma integrado (10 min)
-   ├─ Arquitetura: 2 meses
-   ├─ HVAC: 3 meses
-   ├─ Elétrico: 2 meses
-   └─ Dependências críticas
-
-6. Próximos passos (10 min)
-   └─ Cada um: entrega de dados em X semanas
-```
-
----
-
-## Seção 6: Criando o Programa de Necessidades (Documento Formal)
-
-### Estrutura (conforme RDC 50)
-
-**Título**: Programa de Necessidades HVAC - [Instituição]
-
-**Seção 1: Introdução**
-```
-Este programa de necessidades define os requisitos técnicos, clínicos 
-e operacionais para o projeto de sistema HVAC em [Instituição].
-Baseia-se em NBR 7256:2021 e RDC 50/2002.
-```
-
-**Seção 2: Ambientes Críticos**
-
-Para cada ambiente:
-```
-AMBIENTE: Sala Cirúrgica
-─────────────────────────
-Classificação: CRÍTICA (conforme NBR 7256)
-Risco infeccioso: Alto (ferida aberta)
-Ocupação: 6 pessoas + equipamentos
-Origem dos requisitos: Médico + NBR 7256
-
-Requisitos de HVAC:
-├─ Renovação: 15 trocas/h (NBR 7256)
-├─ Recirculação: até 50% (NBR 7256)
-├─ Pressão: +20 Pa (positiva)
-├─ Filtração: G4 + F7 + H13
-├─ Temperatura: 20-24°C
-├─ Umidade: 45-55%
-├─ Fluxo laminar: Sim (descendente)
-└─ Redundância: N+1 (obrigatória)
-
-Justificativa:
-- Pressão positiva: evita entrada de ar contaminado
-- Filtração em 3 estágios: remove 99.99% de patógenos
-- Fluxo laminar: cria barreira de ar limpo sobre incisão
-- Redundância: se falha, backup garante segurança
-```
-
-**Seção 3: Matriz de Rastreabilidade Consolidada**
-
-Tabela contendo todos os requisitos (como Seção 3 deste módulo).
-
-**Seção 4: Restrições e Oportunidades**
-
-```
-Restrições:
-- Espaço de sala de máquinas limitado a 25 m²
-- Tomada de ar: 60 m de distância (ductagem longa)
-- Orçamento: máximo R$ 800 mil
-
-Oportunidades:
-- Reforma integrada com estrutura = melhor espaço
-- Possibilidade de energia solar (fachada norte)
-- Possibilidade de reuso de água de condensado (paisagismo)
-```
-
----
-
-## Seção 7: Checkpoint - Valide Seu Aprendizado
-
-### Pergunta 1: Matriz de Rastreabilidade
-
-**Você está fazendo levantamento em pequeno hospital. Médico diz:**
-
-"Precisamos isolar um paciente com tuberculose. Qual deve ser o requisito de HVAC e qual a origem?"
-
-**Opções**:
-- A) Pressão +20 Pa, origem: arquitetura
-- B) Pressão -15 Pa, origem: NBR 7256 + clínica ✓
-- C) Umidade 30%, origem: norma internacional
-- D) Fluxo laminar, origem: médico
-
-**Resposta**: **B**
-
-**Explicação**: Isolamento respiratório (TB) requer pressão NEGATIVA para proteger ambiente externo contra contaminação. NBR 7256 especifica -12 a -25 Pa. Origem é dupla: clínica (necessidade médica) + norma (especificação técnica).
-
----
-
-### Pergunta 2: Identificação de Equipamentos
-
-**Durante levantamento, você entra em UTI e vê:**
-- 4 monitores cardíacos
-- 4 ventiladores mecânicos
-- 4 bombas infusoras
-- 2 refrigeradores (medicamentos)
-- 1 televisor
-
-**Qual informação é CRÍTICA para cálculo de carga térmica?**
-
-**Opções**:
-- A) Televisor (conforto)
-- B) Monitores + ventiladores + bombas (potência contínua) ✓
-- C) Refrigeradores (potência intermitente)
-- D) Apenas ocupação humana
-
-**Resposta**: **B**
-
-**Explicação**: Carga térmica SENSÍVEL (aquecimento) vem de equipamentos operando CONTINUAMENTE. Ventiladores mecânicos (100W/unidade = 400W total) + monitores (50W = 200W) + bombas (50W = 200W) = 800W contínuos. Refrigeradores são intermitentes. Televisor é negligenciável. Soma com calor corporal (6 pessoas × 100W = 600W) para carga total ~1.400W.
-
----
-
-### Desafio Prático: Criar Matriz Simplificada
-
-**Cenário**: Você está refazendo levantamento de CLÍNICA OFTALMOLÓGICA (10 consultórios + 1 sala de cirurgia a laser).
-
-**Dados que você coletou**:
-- Sala cirurgia laser: 20 m², cirurgião + técnico (2 pessoas), laser 500W, temperatura crítica
-- Consultórios: 10 × 12 m², oftalmologista + paciente (2 pessoas), apenas lâmpadas (50W)
-- Recepção: 30 m², 3 funcionários
-
-**Sua Tarefa**: 
-1. Classificar cada ambiente (crítico/semi/não-crítico)
-2. Criar matriz com 3 requisitos por ambiente
-
-**Solução Esperada**:
-
-```
-AMBIENTE: Sala Cirurgia Laser
-Classificação: CRÍTICA
-Requisitos:
-
-ID1 | Temperatura 20-22°C rigorosa | Origem: Equipamento (laser sensível) | Elemento: Termostato ±0.5°C
-ID2 | Resfriamento extra 500W | Origem: Cálculo (laser) | Elemento: UTA +3kW capacidade
-ID3 | Filtração G4+F7 | Origem: NBR 7256 semi-crítica + especial | Elemento: 2 estágios filtro
-
-AMBIENTE: Consultórios (10x)
-Classificação: NÃO-CRÍTICA
-Requisitos:
-
-ID1 | Conforto térmico 22-26°C | Origem: Clínica | Elemento: Ar-condicionado split
-ID2 | Renovação mínima 4 trocas/h | Origem: NBR 7256 não-crítica | Elemento: Renovação 50 L/s
-ID3 | Filtração G3+G4 | Origem: NBR 7256 | Elemento: 1 estágio filtro
-
-AMBIENTE: Recepção
-Classificação: NÃO-CRÍTICA
-Requisitos:
-
-ID1 | Conforto 22-26°C | Origem: Clínica | Elemento: Ar-condicionado split
-ID2 | Renovação 3 trocas/h | Origem: NBR 7256 | Elemento: Renovação 30 L/s
-ID3 | Sem filtração especial | Origem: NBR 7256 | Elemento: Filtro padrão G3
-```
-
----
-
-## Glossário Técnico
-
-| Termo | Definição | Aplicação |
-|-------|-----------|-----------|
-| **Levantamento** | Coleta sistemática de informações sobre instituição e requisitos | Fase 1 do projeto |
-| **Programa de Necessidades** | Documento formal com requisitos técnicos e clínicos | Deliverable para RDC 50 |
-| **Matriz de Rastreabilidade** | Tabela que conecta requisito → origem → elemento HVAC | Garantir rastreamento |
-| **Requisito Clínico** | Exigência médica (ex: pressão negativa para TB) | Vem de médico/epidemiologia |
-| **Requisito Normativo** | Exigência de norma (ex: 15 trocas/h cirurgia) | Vem de NBR 7256/RDC 50 |
-| **Carga Térmica Sensível** | Calor que altera temperatura (equipamentos, pessoas) | Determina potência de resfriamento |
-| **Carga Térmica Latente** | Calor que altera umidade (respiração, transpiração) | Determina desumidificação |
-| **N+1 Redundância** | Sistema duplo: se um falha, outro assume | Áreas críticas |
-| **Damper** | Válvula que controla fluxo de ar em dutos | Pressurização/isolamento |
-| **Plenum** | Espaço entre forro e laje (passa ar de retorno) | Economia de dutos |
-
----
-
-## Integração com Próximos Módulos
-
-**Módulo 0** estabeleceu "por quê".  
-**Módulo 1** (este) estabeleceu "o quê" (requisitos).  
-**Módulo 2** começará com "como" (cálculos de vazão baseado nos requisitos daqui).
-
-**Fluxo lógico**:
-```
-Módulo 1: Requisitos coletados
-    ↓
-Módulo 2: Calcula vazão usando esses requisitos
-    ↓
-Módulo 3: Calcula pressão usando esses requisitos
-    ↓
-... E assim por diante
-```
+| Termo | Definição Oficial |
+|-------|---------------------|
+| **Área compartimentada** | Compartimento contra incêndio — área separada horizontal/verticalmente por elementos de resistência ao fogo |
+| **Área de internação** | Ambiente de atenção a pacientes internados para monitoração, avaliação, diagnóstico e tratamento |
+| **Sala de procedimento** | Ambiente para procedimentos de baixa complexidade fora das áreas restritas de centro cirúrgico |
+| **Procedimento invasivo** | Procedimento com penetração de pele, mucosas, espaços/cavidades estéreis, tecidos subepiteliais e sistema vascular |
 
 ---
 
 ## Referências Normativas do Módulo 1
 
-1. **BRASIL. ANVISA - RDC 50/2002** - Apêndice C (Climatização) - Define processo colaborativo de levantamento e define "programa de necessidades" como requisito.
-
-2. **ABNT NBR 7256:2021** - Seção 4 (Classificação de Ambientes) - Tipologia de ambientes que você vai classificar.
-
-3. **ABNT NBR 9050:2020** - Acessibilidade - Quando levantar dados, considerar acessibilidade de sala de máquinas.
+1. **ABNT NBR 7256:2021**, Anexo A (normativo) — Parâmetros de projeto, Tabelas A.1 a A.7 (páginas 29 a 42 da norma).
+2. **ABNT NBR 7256:2021**, item 6.5 — Ambientes operacionais, alerta sobre ressonância magnética.
+3. **BRASIL. ANVISA — RDC 50/2002**, item 7.5 — Instalação de Climatização, remissão à NBR 7256.
 
 ---
 
 ## Próximo Módulo
 
-No **Módulo 2: Renovação, Recirculação e Exaustão**, você usará os requisitos coletados aqui para **calcular vazão de ar** necessária para cada ambiente.
+No **Módulo 2: Renovação, Recirculação e Exaustão**, pegaremos exatamente estes dados de renovação/movimentação (em trocas por hora) e converteremos em **vazão real (L/s)** para o volume específico de cada sala do seu projeto — usando o mesmo processo demonstrado no Módulo 0, Seção 5, mas agora para todos os blocos funcionais.
 
 ---
 
-**Módulo 1 Concluído ✓**
-
-*Você aprendeu a "ouvir" a instituição e traduzir necessidades em especificações mensuráveis. Este é o superpoder do projetista: não é só conhecer normas, é fazer as perguntas certas.*
+**Módulo 1 Concluído ✓ (Versão 2.0 — Verificada)**
 
